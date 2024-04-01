@@ -1,4 +1,5 @@
 package returante;
+
 import javax.swing.JOptionPane;
 
  class Pessoa{
@@ -56,7 +57,19 @@ import javax.swing.JOptionPane;
 }
 public class Restaurante{
     public static void main(String[] args) {
-    Pessoa T34 = new Pessoa("Carlos", "123456789", "0987654321", 30);
-    System.out.println(T34.nome+ T34.cpf+ T34.telefone+ T34.idade );
+    String nome;
+    int idade;
+    String cpf;
+    String telefone;
+    
+    nome = JOptionPane.showInputDialog("nome do cliente");
+    idade = Integer.parseInt(JOptionPane.showInputDialog("idade do cliente"));
+    cpf = JOptionPane.showInputDialog("cpf do cliente");
+    telefone = JOptionPane.showInputDialog("telefone do cliente");
+    
+    Cliente Cliente1 = new Cliente(nome,cpf,telefone,idade);
+    
+    
+            
     }
 }
