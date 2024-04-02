@@ -56,6 +56,7 @@ import javax.swing.JOptionPane;
     public void atendercliente(){}
 }
 public class Restaurante{
+    
     public static void main(String[] args) {
     String nome;
     int idade;
@@ -69,6 +70,8 @@ public class Restaurante{
     
     Cliente Cliente1 = new Cliente(nome,cpf,telefone,idade);
     
+    Object[] itens = {"x-bacon","x-salada","x-gordelas","x-costela","x-chedar","x-vegan"}
+        Object selectedValue = JOptionPane.showInputDialog(null"escolha um lanche","cardapio"JOptionPane.INFORMATION_MESSAGE, null, itens, itens [0]);//    
     
             
     }
