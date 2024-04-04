@@ -104,7 +104,7 @@ public class Restaurante {
         Object sobremesaEscolhida = JOptionPane.showInputDialog(null, "escolha uma sobremesa", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, sobremesas, sobremesas[0]);
 
         Object[] acompanhamento = {"batata", "frango frito", "nuggets", "onion rings", "polenta", "torrada com molho verde", "bolinho de costela","nada"};
-        Object acompanhamentoEscolhida = JOptionPane.showInputDialog(null, "escolha um acompanhamento", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, acompanhamento, acompanhamento[0]);
+        Object acompanhamentoEscolhido = JOptionPane.showInputDialog(null, "escolha um acompanhamento", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, acompanhamento, acompanhamento[0]);
 
         float preço = 0;
         String lancheescolhido = (String) lancheEscolhido;
@@ -130,17 +130,17 @@ public class Restaurante {
             case "nada":
                 preço = (float) (preço + 0.00);
                 break;
-        
+        }
         String bebidaescolhida = (String) bebidaEscolhida;
         switch (bebidaescolhida) {
             case "chop":
-                preço = (float) (preço + 7.00);
+                preço = (float) (preço + 15.00);
                 break;
             case "chop-vinho":
-                preço = (float) (preço + 10.00);
+                preço = (float) (preço + 20.00);
                 break;
             case "caipirinha":
-                preço = (float) (preço + 10.00);
+                preço = (float) (preço + 20.00);
                 break;
             case "pepsi zero":
                 preço = (float) (preço + 6.00);
@@ -154,29 +154,60 @@ public class Restaurante {
             case "nada":
                 preço = (float) (preço + 0.00);
                 break;
+        }
                 
         String sobremesaescolhida = (String) sobremesaEscolhida;
         switch (sobremesaescolhida) {
             case "milkshake":
-                preço = (float) (preço + .00);
+                preço = (float) (preço + 15.00);
                 break;
             case "sorvete":
-                preço = (float) (preço + .00);
+                preço = (float) (preço + 7.00);
                 break;
             case "petit gateau":
-                preço = (float) (preço + .00);
+                preço = (float) (preço + 20.00);
                 break;
-            case "pudim":
-                preço = (float) (preço + .00);
+            case "polenta":
+                preço = (float) (preço + 17.00);
                 break;
             case "banoffee":
-                preço = (float) (preço + .00);
+                preço = (float) (preço + 19.00);
                 break;
             case "nada":
                 preço = (float) (preço + 0.00);
                 break;
-
-            }
-
         }
+         String acompanhamentocolhido = (String) acompanhamentoEscolhido;
+        switch (acompanhamentocolhido) {
+            case "batata":
+                preço = (float) (preço + 12.00);
+                break;
+            case "frango frito":
+                preço = (float) (preço + 20.00);
+                break;
+            case "nuggets":
+                preço = (float) (preço + 10.00);
+                break;
+            case "onion rings":
+                preço = (float) (preço + 9.00);
+                break;
+            case "torrada com molho verde":
+                preço = (float) (preço + 8.00);
+                break;
+            case "bolinho de costela":
+                preço = (float) (preço + 30.00);
+                break;
+            case "nada":
+                preço = (float) (preço + 0.00);
+                break;
+        }
+        Object[] options = {"pagar","cancelar"};
+        int opcaoEscolhida = JOptionPane.showOptionDialog(null,"valor a pagar: "+preço,"pagar a conta",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null, options,options[0]);
+        if (opcaoEscolhida == 0){
+        JOptionPane.showMessageDialog(null,"a conta foi paga","conta",JOptionPane.WARNING_MESSAGE);
+        }
+        else {
+        JOptionPane.showMessageDialog(null,"Pedido cancelado","conta",JOptionPane.ERROR_MESSAGE);    
+        }    
     }
+}            
