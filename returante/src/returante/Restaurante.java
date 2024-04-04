@@ -94,28 +94,89 @@ public class Restaurante {
 
         Cliente Cliente1 = new Cliente(nome, cpf, telefone, idade);
 
-        Object[] lanches = {"x-bacon", "x-salada", "x-gordelas", "x-costela", "x-chedar", "x-vegan"};
+        Object[] lanches = {"x-bacon", "x-salada", "x-gordelas", "x-costela", "x-barbecue", "x-vegan","nada"};
         Object lancheEscolhido = JOptionPane.showInputDialog(null, "escolha um lanche", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, lanches, lanches[0]);
 
-        Object[] bebidas = {"chop", "chop-vinho", "caipirinha", "pepsi zero", "coca-cola zero", "água"};
+        Object[] bebidas = {"chop", "chop-vinho", "caipirinha", "pepsi zero", "coca-cola zero", "água","nada"};
         Object bebidaEscolhida = JOptionPane.showInputDialog(null, "escolha uma bebida", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, bebidas, bebidas[0]);
 
-        Object[] sobremesas = {"milkshake", "sorvete", "petit gateau", "pudim", "banoffee"};
+        Object[] sobremesas = {"milkshake", "sorvete", "petit gateau", "pudim", "banoffee","nada"};
         Object sobremesaEscolhida = JOptionPane.showInputDialog(null, "escolha uma sobremesa", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, sobremesas, sobremesas[0]);
 
-        Object[] acompanhamento = {"batata", "frango frito", "nuggets", "onion rings", "polenta", "torrada com molho verde", "bolinho de costela"};
+        Object[] acompanhamento = {"batata", "frango frito", "nuggets", "onion rings", "polenta", "torrada com molho verde", "bolinho de costela","nada"};
         Object acompanhamentoEscolhida = JOptionPane.showInputDialog(null, "escolha um acompanhamento", "cardapio", JOptionPane.INFORMATION_MESSAGE, null, acompanhamento, acompanhamento[0]);
-       
+
         float preço = 0;
         String lancheescolhido = (String) lancheEscolhido;
-        switch (lancheescolhido ){
+        switch (lancheescolhido) {
             case "x-bacon":
-                preço = preço+20.00;
+                preço = (float) (preço + 20.00);
                 break;
             case "x-salada":
-                preço = preço+1.00
+                preço = (float) (preço + 15.00);
+                break;
+            case "x-gordelas":
+                preço = (float) (preço + 30.00);
+                break;
+            case "x-costela":
+                preço = (float) (preço + 32.00);
+                break;
+            case "x-barbecue":
+                preço = (float) (preço + 22.00);
+                break;
+            case "x-vegan":
+                preço = (float) (preço + 27.00);
+                break;
+            case "nada":
+                preço = (float) (preço + 0.00);
+                break;
+        
+        String bebidaescolhida = (String) bebidaEscolhida;
+        switch (bebidaescolhida) {
+            case "chop":
+                preço = (float) (preço + 7.00);
+                break;
+            case "chop-vinho":
+                preço = (float) (preço + 10.00);
+                break;
+            case "caipirinha":
+                preço = (float) (preço + 10.00);
+                break;
+            case "pepsi zero":
+                preço = (float) (preço + 6.00);
+                break;
+            case "coca-cola zero":
+                preço = (float) (preço + 6.00);
+                break;
+            case "água":
+                preço = (float) (preço + 4.00);
+                break;
+            case "nada":
+                preço = (float) (preço + 0.00);
+                break;
                 
+        String sobremesaescolhida = (String) sobremesaEscolhida;
+        switch (sobremesaescolhida) {
+            case "milkshake":
+                preço = (float) (preço + .00);
+                break;
+            case "sorvete":
+                preço = (float) (preço + .00);
+                break;
+            case "petit gateau":
+                preço = (float) (preço + .00);
+                break;
+            case "pudim":
+                preço = (float) (preço + .00);
+                break;
+            case "banoffee":
+                preço = (float) (preço + .00);
+                break;
+            case "nada":
+                preço = (float) (preço + 0.00);
+                break;
+
+            }
+
         }
-            
     }
-}
